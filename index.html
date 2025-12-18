@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Study App</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<header>
+    <h1>Alven's Flashcard Study App</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Register</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="deck-header">
+        <h2>Study Your Flashcards</h2>
+    </div>
+
+    <div class="big-deck-card">
+
+        <!-- FRONT (QUESTION) -->
+        <div class="question-section">
+            <img id="question-image" src="" alt="Question Image">
+            <h3 id="question-text"></h3>
+        </div>
+
+        <!-- INPUT -->
+        <div class="input-section">
+            <label>Your Answer:</label>
+            <input type="text" id="user-answer">
+            <button onclick="showAnswer()">Show Answer</button>
+        </div>
+
+        <!-- BACK (ANSWER) -->
+        <div class="answer-section" id="answer-section">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front"></div>
+                    <div class="back">
+                        <div id="answer-display" class="answer-display"></div>
+                        <img id="answer-image" class="answer-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+    <div class="add-flashcard">
+        <h3>Add New Flashcard</h3>
+        <input type="text" id="new-question" placeholder="Enter question">
+        <input type="text" id="new-answer" placeholder="Enter answer">
+        <button onclick="addNewFlashcard()">Add Flashcard</button>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="navigation">
+        <button onclick="prevCard()">Previous</button>
+        <button onclick="nextCard()">Next</button>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Flashcard App</p>
+</footer>
+
+<script src="function.js"></script>
+</body>
+</html>
